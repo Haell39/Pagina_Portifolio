@@ -10,7 +10,7 @@
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
-/* Main Colors */
+/* Cores principais */
 :root {
   --bg-color: #fdfdfd;
   --text-color: #333;
@@ -18,7 +18,7 @@
   --white-color: #fdfdfd;
   --shadow-color: rgba(0, 0, 0, 0.2);
 }
-/* Main Colors */
+/* Cores principais */
 
 *::selection {
   background: var(--main-color);
@@ -605,6 +605,8 @@ span {
   border: 0.2rem solid var(--main-color);
   outline: 0.2rem solid transparent;
   transition: 0.5s ease;
+  color:#0b061f;
+  font-weight: bold;
 }
 
 .footer-iconTop a:hover {
@@ -613,7 +615,7 @@ span {
 
 .footer-iconTop a i {
   font-size: 2.4rem;
-  color: #333;
+  color: #188a6d;
 }
 
 /* BREAKPOINTS */
