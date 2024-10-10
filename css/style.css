@@ -605,7 +605,7 @@ span {
   border: 0.2rem solid var(--main-color);
   outline: 0.2rem solid transparent;
   transition: 0.5s ease;
-  color:#0b061f;
+  color: #0b061f;
   font-weight: bold;
 }
 
@@ -949,4 +949,55 @@ img {
 
 .btn {
   flex: 1 0 150px; /* Cada botão ocupa pelo menos 150px e cresce proporcionalmente */
+}
+
+/* Estilo para alinhar as imagens lado a lado */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar para a próxima linha se não houver espaço */
+  gap: 20px; /* Espaçamento entre as caixas */
+  justify-content: space-around; /* Distribui igualmente o espaço entre os elementos */
+  align-items: stretch; /* Garante que todas as caixas terão a mesma altura */
+}
+
+.portfolio-box {
+  flex: 1 1 80%; /* Cada box agora ocupa 80% da largura */
+  max-width: 80%; /* Limita o tamanho da box */
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px; /* Espaçamento entre as linhas */
+  display: flex; /* Faz com que o conteúdo interno se ajuste ao tamanho */
+  flex-direction: column; /* Mantém a orientação vertical dos itens */
+}
+
+.portfolio-box img {
+  width: 100%; /* As imagens vão ocupar 100% da largura da caixa */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Bordas levemente arredondadas */
+}
+
+.portfolio-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  opacity: 1; /* Mostra a camada de descrição ao passar o mouse */
+}
+
+.portfolio-layer h4,
+.portfolio-layer p,
+.portfolio-layer a {
+  color: white;
+  text-align: center;
 }
