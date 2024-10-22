@@ -968,27 +968,13 @@ img {
   margin-bottom: 20px; /* Espaçamento entre as linhas */
   display: flex; /* Faz com que o conteúdo interno se ajuste ao tamanho */
   flex-direction: column; /* Mantém a orientação vertical dos itens */
-}
-
-.portfolio-box img {
-  width: 100%; /* As imagens vão ocupar 100% da largura da caixa */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 10px; /* Bordas levemente arredondadas */
+  min-height: 300px; /* Define uma altura mínima para as caixas */
 }
 
 .portfolio-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semitransparente */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  flex-direction: column; /* Mantém a orientação vertical dos itens */
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
 }
 
 .portfolio-box:hover .portfolio-layer {
@@ -1001,3 +987,4 @@ img {
   color: white;
   text-align: center;
 }
+
