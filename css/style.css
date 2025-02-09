@@ -12,12 +12,23 @@
 }
 /* Cores principais */
 :root {
-  --bg-color: #fdfdfd;
-  --text-color: #333;
-  --main-color: #188a6d;
-  --white-color: #fdfdfd;
-  --shadow-color: rgba(0, 0, 0, 0.2);
+  --bg-color: #eeeeee;
+  --text-color: #222831;
+  --main-color: #00adb5;
+  --white-color: #393e46;
+  --shadow-color: #393e46;
 }
+
+/*
+:root {
+  --bg-color: #EEEEEE;
+  --text-color: #222831;
+  --main-color: #76ABAE;
+  --white-color: #fdfdfd;
+  --shadow-color: #31363F;
+}
+*/
+
 /* Cores principais */
 
 *::selection {
@@ -615,7 +626,7 @@ span {
 
 .footer-iconTop a i {
   font-size: 2.4rem;
-  color: #188a6d;
+  color: #00adb5;
 }
 
 /* BREAKPOINTS */
@@ -942,43 +953,45 @@ img {
 
 .contact-options {
   display: flex;
-  flex-wrap: wrap; /* Permite que os botões quebrem a linha */
-  justify-content: center; /* Centraliza os botões horizontalmente */
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
 }
 
 .btn {
-  flex: 1 0 150px; /* Cada botão ocupa pelo menos 150px e cresce proporcionalmente */
+  flex: 1 0 150px;
 }
 
 /* Estilo para alinhar as imagens lado a lado */
 .portfolio-container {
   display: flex;
-  flex-wrap: wrap; /* Permite quebrar para a próxima linha se não houver espaço */
-  gap: 20px; /* Espaçamento entre as caixas */
-  justify-content: space-around; /* Distribui igualmente o espaço entre os elementos */
-  align-items: stretch; /* Garante que todas as caixas terão a mesma altura */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 .portfolio-box {
-  flex: 1 1 80%; /* Cada box agora ocupa 80% da largura */
-  max-width: 80%; /* Limita o tamanho da box */
+  flex: 1 1 80%;
+  max-width: 80%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 20px; /* Espaçamento entre as linhas */
-  display: flex; /* Faz com que o conteúdo interno se ajuste ao tamanho */
-  flex-direction: column; /* Mantém a orientação vertical dos itens */
-  min-height: 300px; /* Define uma altura mínima para as caixas */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
 }
 
 .portfolio-layer {
   display: flex;
-  flex-direction: column; /* Mantém a orientação vertical dos itens */
-  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .portfolio-box:hover .portfolio-layer {
-  opacity: 1; /* Mostra a camada de descrição ao passar o mouse */
+  opacity: 1;
 }
 
 .portfolio-layer h4,
@@ -988,14 +1001,12 @@ img {
   text-align: center;
 }
 
-/* Estilos existentes... */
-
-/* Novos estilos para a seção de projetos */
+/* + estilos seção de projetos */
 .portfolio .portfolio-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: stretch; /* Garante que todas as caixas tenham a mesma altura */
-  gap: 2.5rem; /* Espaçamento entre as caixas */
+  align-items: stretch;
+  gap: 2.5rem;
 }
 
 .portfolio-container .portfolio-box {
@@ -1004,12 +1015,12 @@ img {
   border-radius: 2rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 300px; /* Altura fixa para uniformidade */
+  height: 300px;
 }
 
 .portfolio-box img {
   width: 100%;
-  height: auto; /* Mantém a proporção da imagem */
+  height: auto;
 }
 
 .portfolio-box .portfolio-layer {
@@ -1019,4 +1030,134 @@ img {
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+}
+
+/*seletor do Google Tradutor */
+.translate-container select {
+  height: 30px;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/*header e navegação */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  background: transparent;
+  z-index: 100;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.menu-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 1.7rem;
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+.translate-container {
+  flex-shrink: 0;
+  margin-left: 2rem;
+}
+
+#google_translate_element {
+  min-width: 150px;
+}
+
+/* ++ responsividade */
+@media (max-width: 1024px) {
+  .header {
+    padding: 2rem 4%;
+  }
+
+  .navbar {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 3%;
+  }
+
+  .menu-container {
+    order: 3;
+    width: 100%;
+    background: var(--bg-color);
+    padding: 1rem;
+    display: none;
+  }
+
+  .menu-container.active {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .navbar a {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .translate-container {
+    margin-left: 0;
+    margin-right: 5rem;
+  }
+
+  #menu-icon {
+    display: block;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem 2%;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .translate-container {
+    margin-right: 4rem;
+  }
+
+  #google_translate_element {
+    min-width: 120px;
+  }
 }
