@@ -61,4 +61,4 @@ portfolio/
 Este projeto está sob a licença [MIT](./LICENSE).
 
 ---
-⭐️ Feito com por Rafael Dutra.
+⭐️ Feito por Rafael Dutra.
